@@ -6,5 +6,5 @@
 @apply text-primary;
 }
 .hero-image{
-    @apply bg-cover bg-no-repeat bg-center min-h-[89vh] bg-fixed mix-blend-saturation;
+    @apply bg-cover bg-fixed bg-no-repeat bg-center min-h-[89vh] bg-fixed mix-blend-saturation;
 }
