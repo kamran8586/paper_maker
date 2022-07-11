@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-.active{
-@apply text-primary;
+.active {
+    @apply text-primary;
 }
-.hero-image{
+:focus{
+    border: none;
+    outline: none;
+}
+.hero-image {
     @apply bg-cover bg-fixed bg-no-repeat bg-center min-h-[89vh] bg-fixed mix-blend-saturation;
+}
+
+.section__heading{
+    @apply relative;
+}
+
+.section__heading::after {
+    @apply bg-primary block w-20 mx-auto absolute -bottom-2 w-1/12 h-1 left-[50%];
+}
+p::selection{
+    opacity: 0.7;
+    text-shadow: 1px 0 3px wheat;
+}
+h3::selection{
+    opacity: 0.7;
+    text-shadow: 5px 0 8px rgb(16, 40, 16);
 }

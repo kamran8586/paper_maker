@@ -11,7 +11,7 @@ import "./style.css";
 // import required modules
 import { Pagination } from "swiper";
 import Testimonial from "./Testimonial";
-import Section_Heading from "./Section_Heading";
+import Section_Heading from "./SectionHeading";
 export default function App() {
   const names = ["Kamran", "John", "Jane", "Jack", "Jill"];
   let arr = ["zoom-in-right", "fade-up", "zoom-in-left"];
@@ -20,6 +20,7 @@ export default function App() {
       <Section_Heading text="Testimonial" width={44} />
       <Swiper
         spaceBetween={30}
+        effect = "flip"
         pagination={{
           clickable: true,
         }}

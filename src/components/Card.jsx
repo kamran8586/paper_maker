@@ -1,5 +1,5 @@
 import React from "react";
-import Section_Heading from "./Section_Heading";
+import Section_Heading from "./SectionHeading";
 
 const Cards = () => {
   let arr = ["zoom-in-right", "fade-up", "zoom-in-left"];
@@ -11,7 +11,7 @@ const Cards = () => {
   return (
     <>
       <Section_Heading text="Our Services" width={28} />
-      <div className="cards col-span-12 grid grid-cols-12 border-2 gap-5">
+      <div className="cards col-span-12 grid grid-cols-12 gap-5">
         {arr.map((item, index) => (
           <Card data={{ item, index, cardText }} key={index} />
         ))}
@@ -26,7 +26,7 @@ function Card({ data }) {
       <div
         data-aos={item}
         data-aos-duration="1000"
-        className="col-span-4 hover:shadow-xl shadow-md transition-all duration-200 shadow-slate-300"
+        className="lg:col-span-4 col-span-12 hover:shadow-xl shadow-md transition-all duration-200 shadow-slate-300"
       >
         <img
           className="w-full"

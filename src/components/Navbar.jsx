@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function Navbar() {
+function Navbar({isContainerTrue}) {
   return (
     <>
-      <nav data-aos="flip-down" className="bg-secondary border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow-sm">
-        <div className="container flex flex-wrap justify-between items-center mx-auto">
+      <nav
+        data-aos="flip-down"
+        className={`bg-secondary z-50 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow-sm`}
+      >
+        <div className={`${isContainerTrue ? "container" : null} flex flex-wrap justify-between items-center mx-auto`}>
           <Link to={"/"} className="flex items-center">
             <img
               src="images/logo.jpg"
