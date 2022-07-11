@@ -8,7 +8,9 @@ import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import useEscape from './hooks/useEscape';
-
+import MCQS from './components/MCQ';
+import Questions from './components/Questions';
+import Heading from './components/Heading';
 
 function App () {
 
@@ -27,7 +29,12 @@ function App () {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/c_p_home" element={< CPHome />} />
+        <Route path="/c_p_home" element={< CPHome />} >
+          <Route index element={<MCQS />} />
+          <Route path="mcqs" element={<MCQS />} />
+          <Route path = 'questions' element = { <Questions />} />
+          <Route path = 'heading' element = { <Heading />} />
+        </Route>
         <Route path="/c_p_documentation" element={< Documentation />} />
       </Routes>
     </>
