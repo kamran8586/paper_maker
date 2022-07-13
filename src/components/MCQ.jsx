@@ -1,4 +1,5 @@
 import React from "react";
+import ApplyButton from "./ApplyButton";
 
 const MCQS = () => {
   return (
@@ -42,9 +43,7 @@ const MCQS = () => {
             className="col-span-6 focus:ring-primary"
             placeholder="FourthChoice"
           />
-          <button className="block bg-primary hover:shadow-lg  text-md focus:shadow-green-300 focus:shadow-lg hover:shadow-green-300 transition-all duration-200bg-primary px-7 py-2 text-secondary w-fit">
-            Apply
-          </button>
+          <ApplyButton ON_CLICK={()=>alert("mcq's")} />
         </div>
       </div>
     </>

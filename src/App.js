@@ -30,8 +30,8 @@ function App () {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/c_p_home" element={< CPHome />} >
-          <Route index element={<MCQS />} />
-          <Route path="mcqs" element={<MCQS />} />
+          <Route index element={<Heading />} />
+          <Route exact path="mcqs" element={<MCQS />} />
           <Route path = 'questions' element = { <Questions />} />
           <Route path = 'heading' element = { <Heading />} />
         </Route>

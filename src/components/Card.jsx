@@ -3,6 +3,11 @@ import Section_Heading from "./SectionHeading";
 
 const Cards = () => {
   let arr = ["zoom-in-right", "fade-up", "zoom-in-left"];
+  const imagesUrl = [
+    "images/notes.svg",
+    "images/services2.svg",
+    "images/services3.svg",
+  ];
   let cardText = [
     "Make papers Easily",
     "Make papers in less time",
@@ -13,13 +18,17 @@ const Cards = () => {
       <Section_Heading text="Our Services" width={28} />
       <div className="cards col-span-12 grid grid-cols-12 gap-5">
         {arr.map((item, index) => (
-          <Card data={{ item, index, cardText }} key={index} />
+          <Card
+            data={{ item, index, cardText }}
+            key={index}
+            imagesUrl={imagesUrl}
+          />
         ))}
       </div>
     </>
   );
 };
-function Card({ data }) {
+function Card({ data, imagesUrl }) {
   const { item, cardText, index } = data;
   return (
     <>
@@ -30,7 +39,7 @@ function Card({ data }) {
       >
         <img
           className="w-full"
-          src="images/notes.svg"
+          src={imagesUrl[index]}
           alt="Sunset in the mountains"
         />
         <div className="px-6 py-4">

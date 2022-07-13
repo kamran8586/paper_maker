@@ -4,7 +4,9 @@ import Navbar from '../components/Navbar';
 import ButtonGroup from '../components/ButtonGroup';
 import MCQS from '../components/MCQ';
 import { Outlet } from 'react-router';
-const c_p_home = () => {
+import { useSelector } from 'react-redux';
+const C_P_HOME = () => {
+  const { heading } = useSelector(state => state.heading);
   return (
     <>
       <Navbar isContainerTrue={false} />
@@ -13,8 +15,10 @@ const c_p_home = () => {
           <ButtonGroup />
           <Outlet />
         </div>
-        <div className="col-span-6 bg-slate-200 h-screen">
-
+        <div className="col-span-6 bg-slate-200 h-screen overflow-y-scroll">
+          <div className="heading select-none">
+            <h1 className='text-2xl text-center font-bold mt-8'>{heading}</h1>
+          </div>
         </div>
 
       </div>
@@ -22,4 +26,4 @@ const c_p_home = () => {
   )
 }
 
-export default c_p_home;
+export default C_P_HOME;
