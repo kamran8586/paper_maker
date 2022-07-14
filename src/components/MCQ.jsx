@@ -1,18 +1,48 @@
 import React from "react";
-import ApplyButton from "./ApplyButton";
 
+import ApplyButton from "./ApplyButton";
+import { useDispatch } from "react-redux/es/exports";
+import { addmcqs } from "../redux/reducers/mcqs";
+import combineMcqs from "../helper_functions/combineMcqs";
 const MCQS = () => {
+  const dispatch = useDispatch();
+
+  function handleSubmit(e) {
+    const { mcqsText, firstInput, secondInput, thirdInput, fourthInput } =
+      e.target.elements;
+    dispatch(
+      addmcqs(
+        combineMcqs(
+          mcqsText.value,
+          firstInput.value,
+          secondInput.value,
+          thirdInput.value,
+          fourthInput.value
+        )
+      )
+    );
+
+    mcqsText.value = "";
+    firstInput.value = "";
+    secondInput.value = "";
+    thirdInput.value = "";
+    fourthInput.value = "";
+    e.preventDefault();
+  }
   return (
     <>
-      <div className="col-span-8 col-start-2 divide-y-2">
+      <form
+        className="col-span-8 col-start-2 divide-y-2"
+        onSubmit={handleSubmit}
+      >
         <label
-          htmlFor="message"
+          htmlFor="mcqsText"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
         >
           MCQ's Text Here
         </label>
         <textarea
-          id="message"
+          id="mcqsText"
           rows={4}
           className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
           placeholder="MCQ's Text Here"
@@ -43,9 +73,9 @@ const MCQS = () => {
             className="col-span-6 focus:ring-primary"
             placeholder="FourthChoice"
           />
-          <ApplyButton ON_CLICK={()=>alert("mcq's")} />
+          <ApplyButton isInputSubmit={true} />
         </div>
-      </div>
+      </form>
     </>
   );
 };

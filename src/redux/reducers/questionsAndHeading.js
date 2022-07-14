@@ -3,12 +3,12 @@ import { ADD_QUESTION } from '../reduxConstants';
 export const questionSlice = createSlice({
     name: ADD_QUESTION,
     initialState: {
-        question: [],
+        questions: [],
     },
     reducers: {
         addquestion: (state, action) => {
             // state.value += action.payload
-            return { mcqs: [...state.quetsion, action.payload] }
+            return { questions: [...state.questions, action.payload] }
         },
     },
 })

@@ -3,7 +3,7 @@ import { ADD_MCQ } from '../reduxConstants'
 export const mcqSlice = createSlice({
     name: ADD_MCQ,
     initialState: {
-        mcqs: null,
+        mcqs: [],
     },
     reducers: {
         addmcqs: (state, action) => {
