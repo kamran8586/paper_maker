@@ -12,7 +12,7 @@
 }
 
 .hero-image {
-    @apply bg-cover bg-fixed bg-no-repeat bg-center min-h-[89vh] bg-fixed mix-blend-saturation;
+    @apply bg-cover bg-fixed bg-no-repeat bg-center min-h-[89vh] mix-blend-saturation;
 }
 
 .section__heading {
@@ -20,7 +20,7 @@
 }
 
 .section__heading::after {
-    @apply bg-primary block w-20 mx-auto absolute -bottom-2 w-1/12 h-1 left-[50%];
+    @apply bg-primary block mx-auto absolute -bottom-2 w-1/12 h-1 left-[50%];
 }
 
 p::selection {
@@ -34,5 +34,5 @@ h3::selection {
 }
 
 .active.btn-group-active {
-    @apply ring-primary ring-2 text-primary;
+    @apply ring-primary ring-1 text-primary;
 }

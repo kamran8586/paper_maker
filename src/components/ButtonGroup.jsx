@@ -14,7 +14,7 @@ const BuittonGroup = () => {
     <>
       <div className="inline-flex shadow-sm col-start-8" role="group">
         <NavLink
-          className={`py-2 px-4 text-sm font-medium text-gray-900 bg-white border btn-group-active border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-primary dark:focus:text-white 
+          className={`py-2 px-4 text-sm font-medium text-gray-900 bg-white border btn-group-active border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-1 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-primary dark:focus:text-white 
           ${({ isActive }) => (isActive ? "btn-group-active" : "")}
           `}
           to={`heading`}
@@ -22,14 +22,14 @@ const BuittonGroup = () => {
           Heading
         </NavLink>
         <NavLink
-          className={`py-2 px-4 text-sm font-medium text-gray-900 bg-white border border-gray-200 btn-group-active hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-primary dark:focus:text-white
+          className={`py-2 px-4 text-sm font-medium text-gray-900 bg-white border border-gray-200 btn-group-active hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-1 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-primary dark:focus:text-white
           ${({ isActive }) => (isActive ? "btn-group-active" : "")}`}
           to={"mcqs"}
         >
           MCQ'S
         </NavLink>
         <NavLink
-          className={`py-2 px-4 text-sm font-medium text-gray-900 bg-white border-t btn-group-active border-b border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-primary dark:focus:text-white  ${({
+          className={`py-2 px-4 text-sm font-medium text-gray-900 bg-white border-t btn-group-active border-b border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-1 focus:ring-primary focus:text-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-primary dark:focus:text-white  ${({
             isActive,
           }) => (isActive ? "btn-group-active" : "")}`}
           to={"questions"}

@@ -11,7 +11,7 @@ const Section_Heading = ({ text, width }) => {
           }
         `}
       </style>
-      <h2 className="col-span-12 text-center mt-20 text-4xl font-serif select-none section__heading">
+      <h2 className="col-span-12 text-center mt-20 text-4xl font-normal select-none section__heading">
         {text}
       </h2>
     </>

@@ -5,26 +5,37 @@ import SectionHeading from "./SectionHeading";
 const Footer = () => {
   const listText = ["Home", "About", "Services", "Contact"];
   return (
-    <>
-      <div
-        data-aos="zoom-in-up"
-        className="bg-secondary dark:bg-slate-800 grid mt-8"
-      >
-        <div className="item__parent grid gap-3 grid-cols-12 grid-rows-6  p-16">
-          <ul className="items  col-span-4 row-span-6 flex flex-col gap-3 w-fit">
-            {listText.map((item, index) => (
-              <Link to={"/"} className="text-lg hover:text-primary" key={index}>
-                {item}{" "}
-              </Link>
-            ))}
-          </ul>
-        </div>
-
-        <div className="copy__right text-center text-xl select-none ">
-          &copy; Copyright 2022
-        </div>
-      </div>
-    </>
+    <footer className="p-4 md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-8">
+      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        &copy; 2022 
+        <a href="https://flowbite.com/" className="hover:underline mx-1">
+         Paper Maker
+        </a>
+        . All Rights Reserved.
+      </span>
+      <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+          <a href="#" className="mr-4 hover:underline md:mr-6 ">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#" className="mr-4 hover:underline md:mr-6">
+            Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a href="#" className="mr-4 hover:underline md:mr-6">
+            Licensing
+          </a>
+        </li>
+        <li>
+          <a href="#" className="hover:underline">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </footer>
   );
 };
 

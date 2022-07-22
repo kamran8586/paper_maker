@@ -1,12 +1,11 @@
 // import Sidebar from '../components/Sidebar'
 import React, { Fragment } from 'react'
 import { Outlet } from 'react-router';
-import { v4 as uuidv4 } from 'uuid';
 import { useSelector } from 'react-redux';
 import html2pdf from 'html2pdf.js';
+
 import Navbar from '../components/Navbar';
 import ButtonGroup from '../components/ButtonGroup';
-import MCQS from '../components/MCQ';
 import ApplyButton from '../components/ApplyButton';
 import ShowMCQs from '../components/ShowMCQs';
 import ShowQuestion from '../components/ShowQuestion';

@@ -29,22 +29,23 @@ const MCQS = () => {
     fourthInput.value = "";
     e.preventDefault();
   }
+
+  const inputStyle =
+    "bg-secondary col-span-6 text-gray-900 text-sm border-none ring-1 ring-gray-400 focus:ring-primary block w-full p-2.5 dark:bg-gray-700dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary ";
   return (
     <>
       <form
         className="col-span-8 col-start-2 divide-y-2"
         onSubmit={handleSubmit}
       >
-        <label
-          htmlFor="mcqsText"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-        >
+        <label htmlFor="mcqsText" className="">
+          {/* block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 */}
           MCQ's Text Here
         </label>
         <textarea
           id="mcqsText"
           rows={4}
-          className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+          className={inputStyle}
           placeholder="MCQ's Text Here"
           defaultValue={""}
         />
@@ -52,7 +53,7 @@ const MCQS = () => {
           <input
             type="text"
             name="firstInput"
-            className="col-span-6 focus:ring-primary "
+            className={inputStyle}
             placeholder="FirstChoice"
           />
           <input
@@ -64,13 +65,13 @@ const MCQS = () => {
           <input
             type="text"
             name="thirdInput"
-            className="col-span-6 focus:ring-primary "
+            className={inputStyle}
             placeholder="ThirdChoice"
           />
           <input
             type="text"
             name="fourthInput"
-            className="col-span-6 focus:ring-primary"
+            className={inputStyle}
             placeholder="FourthChoice"
           />
           <ApplyButton isInputSubmit={true} />

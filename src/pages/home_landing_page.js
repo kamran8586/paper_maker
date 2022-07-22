@@ -10,9 +10,9 @@ import Navbar from '../components/Navbar'
 function home_landing_page () {
     return (
         <>
-            <Navbar isContainerTrue={true}/>
+            <Navbar isContainerTrue={true}/>           <Hero />
             <div className='container grid gap-y-5 grid-cols-12 '>
-                <Hero />
+     
                 <Card />
                 <Swiper />
                 <Form />

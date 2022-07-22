@@ -10,10 +10,10 @@ const ApplyButton = ({
     <input
       type={isInputSubmit ? "submit" : "button"}
       value={btnText || "Apply"}
-      className={`px-7 py-2 bg-primary  block text-secondary cursor-pointer hover:shadow-lg hover:shadow-green-300 w-fit mb-2 ${additionalClasses}`}
+      className={` hover:bg-primary w-fit px-7 py-2 hover:opacity-90 bg-primary  block text-secondary cursor-pointer  mb-2`}
       onClick={ON_CLICK}
     />
   );
 };
-
+//
 export default ApplyButton;
